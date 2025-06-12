@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOMEBREW SCRIPT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- TOP CONTROLS (FILE UPLOAD + SAVE BUTTON) -->
+  <div class="controls">
+    <input type="file" id="fileInput" accept=".json">
+    <button onclick="window.print()">Save as PDF</button>
+  </div>
+
+  <!-- MAIN PAGE CONTENT -->
+  <div class="page" id="page">
+    <header>
+      <div class="header-top">
+        <div class="title-author">
+          <h1 id="script-title">Script Title</h1>
+          <span id="script-author" class="author">by Author</span>
+        </div>
+        <div id="fabled-icons" class="fabled-icons"></div>
+      </div>
+    </header>
+
+    <main id="role-list"></main>
+
+    <footer>
+      <div class="credit">
+        © <span id="script-author-credit"></span> —
+        <span id="script-almanac-bottom" class="almanac-link"></span>
+      </div>
+      <div class="note">*Not the first Night</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

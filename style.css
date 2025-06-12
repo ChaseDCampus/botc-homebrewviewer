@@ -1,0 +1,734 @@
+
+/*FONTS*/
+
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Quicksand:wght@700&display=swap');
+
+/* Title */
+#script-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  font-size: 1.0rem;
+  letter-spacing: 0.05rem;
+  color: #612629; /* example: dark red */
+}
+
+/* Author */
+#script-author,
+#script-author-credit {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #612629; /* example: dark red */
+}
+
+/* Role Names */
+.role-name {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+/* Role Abilities */
+.role-ability {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Section Labels (TOWNSFOLK, OUTSIDER, etc.) */
+.section-divider span {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  color: #612629; /* example: dark red */
+}
+
+
+
+
+main {
+  flex: 1 0 auto; /* Grow to fill remaining space */
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #f3f0eb;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  height: auto; /* full viewport height */
+  width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding-top: 0.0in;
+  padding-left: 0.0in;
+  padding-right: 0.0in;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+}
+
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  font-size: 16px;
+}
+
+
+#script-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#script-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.fabled-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.fabled-icons img {
+  width: 100px;
+  height: 100px;
+}
+
+.fabled-icons span {
+  font-size: 16px;
+  color: #7a494b; /* Purple-gold hybrid */
+
+}
+
+.section-divider {
+  border-top: 2px solid #ddd6d2;
+  margin: 0.0rem 0 0.0rem;
+  position: relative;
+}
+
+.section-divider span {
+  min-width: auto;          /* Let it size naturally */
+  max-width: 90%;           /* Prevent it from overflowing */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  right: 0.5rem;
+  top: -0.9rem;
+  background: white;
+  color: #612629;
+  border: 2px solid #ddd6d2; 
+  border-radius: 999px;
+  padding: 0.0rem 0.2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;            /* Center-align text */
+}
+
+.role-table {
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: 20px 100px 1fr;
+  column-gap: 0.4rem;
+  row-gap: 0;
+  margin-bottom: 0.1rem;
+  padding: 0;
+  align-items: center;
+  gap: 1rem; /* Reduced horizontal spacing */
+}
+
+.role-row img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.role-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+}
+
+.role-ability {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+
+.role-name, .role-ability {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+footer .note {
+  margin-left: auto;
+  text-align: right;
+}
+
+
+#save-btn {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.controls {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  z-index: 100;
+  font-family: 'Georgia', serif;
+}
+
+.controls input[type="file"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px dashed #612629;
+  border-radius: 6px;
+  background: #fff6f5;
+  color: #612629;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.controls input[type="file"]:hover {
+  background-color: #f2e2df;
+  border-color: #7a494b;
+}
+
+.controls button {
+  font-size: 1rem;
+  background: linear-gradient(to right, #7a494b, #612629);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.controls button:hover {
+  background: linear-gradient(to right, #612629, #7a494b);
+  transform: scale(1.03);
+}
+
+
+@media screen {
+  html, body {
+    height: 100vh;
+    margin: .25in;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .page {
+    transform: scale(.65); /* Adjust this to fit better */
+    transform-origin: top center;
+    height: auto;
+  }
+}
+
+
+.title-author {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-end;
+  font-size: 1.4rem;
+}
+
+#script-author {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  align-self: flex-end;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Aligns both title-author and fableds at bottom */
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.title-author {
+  display: flex;
+  align-items: flex-end; /* Align title and author */
+  gap: 1rem;
+}
+
+#script-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: .9;
+}
+
+#script-author {
+  margin: 0;
+  font-size: 1rem;
+  line-height: .9;
+}
+
+.fabled-icons {
+  display: flex;
+  align-items: flex-end; /* Align fableds to the same bottom line */
+  gap: 10px;
+}
+
+
+
+
+@page {
+  margin-left: 0.45in !important;
+  margin-right: 0.45in !important;
+  margin-top: .2in !important;
+  margin-bottom: 0in !important;
+  size: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* full viewport height */
+  width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding-top: 0.0in;
+  padding-left: 0.0in;
+  padding-right: 0.0in;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+
+}
+
+@media print {
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .page {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Hide everything not in .page */
+  body * {
+    visibility: hidden !important;
+  }
+
+  .page, .page * {
+    visibility: visible !important;
+  }
+
+  
+/*FONTS*/
+
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Quicksand:wght@700&display=swap');
+
+/* Title */
+#script-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  font-size: 1.0rem;
+  letter-spacing: 0.05rem;
+  color: #612629; /* example: dark red */
+}
+
+/* Author */
+#script-author,
+#script-author-credit {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #612629; /* example: dark red */
+}
+
+/* Role Names */
+.role-name {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+/* Role Abilities */
+.role-ability {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Section Labels (TOWNSFOLK, OUTSIDER, etc.) */
+.section-divider span {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  color: #612629; /* example: dark red */
+}
+
+
+
+
+main {
+  flex: 1 0 auto; /* Grow to fill remaining space */
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #f3f0eb;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  height: auto; /* full viewport height */
+  width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding-top: 0.0in;
+  padding-left: 0.0in;
+  padding-right: 0.0in;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+}
+
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  font-size: 16px;
+}
+
+
+#script-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#script-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.fabled-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.fabled-icons img {
+  width: 100px;
+  height: 100px;
+}
+
+.fabled-icons span {
+  font-size: 16px;
+  color: #7a494b; /* Purple-gold hybrid */
+
+}
+
+.section-divider {
+  border-top: 2px solid #ddd6d2;
+  margin: 0.0rem 0 0.0rem;
+  position: relative;
+}
+
+.section-divider span {
+  min-width: auto;          /* Let it size naturally */
+  max-width: 90%;           /* Prevent it from overflowing */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  right: 0.5rem;
+  top: -0.9rem;
+  background: white;
+  color: #612629;
+  border: 2px solid #ddd6d2; 
+  border-radius: 999px;
+  padding: 0.0rem 0.2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;            /* Center-align text */
+}
+
+.role-table {
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: 28px 125px 1fr;
+  column-gap: 0.4rem;
+  row-gap: 0;
+  margin-bottom: 0.1rem;
+  padding: 0;
+  align-items: center;
+  gap: 1rem; /* Reduced horizontal spacing */
+}
+
+.role-row img {
+  width: 2.4rem;
+  height: 2.4rem;
+  image-rendering: auto;        /* default */
+  image-rendering: crisp-edges; /* alternative: better for pixel icons */
+  image-rendering: -webkit-optimize-contrast; /* for Chrome/WebKit print quality */
+}
+
+.role-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+}
+
+.role-ability {
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+
+.role-name, .role-ability {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+footer .note {
+  margin-left: auto;
+  text-align: right;
+}
+
+
+#save-btn {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.controls {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  z-index: 100;
+  font-family: 'Georgia', serif;
+}
+
+.controls input[type="file"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px dashed #612629;
+  border-radius: 6px;
+  background: #fff6f5;
+  color: #612629;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.controls input[type="file"]:hover {
+  background-color: #f2e2df;
+  border-color: #7a494b;
+}
+
+.controls button {
+  font-size: 1rem;
+  background: linear-gradient(to right, #7a494b, #612629);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.controls button:hover {
+  background: linear-gradient(to right, #612629, #7a494b);
+  transform: scale(1.03);
+}
+
+
+@media screen {
+  html, body {
+    height: 100vh;
+    margin: .25in;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .page {
+    transform: scale(.65); /* Adjust this to fit better */
+    transform-origin: top center;
+    height: auto;
+  }
+}
+
+
+.title-author {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-end;
+  font-size: 1.4rem;
+}
+
+#script-author {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  align-self: flex-end;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Aligns both title-author and fableds at bottom */
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.title-author {
+  display: flex;
+  align-items: flex-end; /* Align title and author */
+  gap: 1rem;
+}
+
+#script-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: .9;
+}
+
+#script-author {
+  margin: 0;
+  font-size: 1rem;
+  line-height: .9;
+}
+
+.fabled-icons {
+  display: flex;
+  align-items: flex-end; /* Align fableds to the same bottom line */
+  gap: 10px;
+}
+  @page {
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    margin-top: 0in;
+    margin-bottom: 0in;
+    size: auto;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+  }
+
+  .page {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100vh !important; /* Full page height */
+    justify-content: space-between !important;
+    box-sizing: border-box;
+    page-break-after: always;
+  }
+
+  main.content {
+    flex-grow: 1;
+  }
+
+footer {
+  display: flex;
+  justify-content: space-between; /* Push left and right to edges */
+  align-items: flex-end; /* Align both vertically at the bottom */
+  font-size: 0.85rem;
+  color: #555;
+  width: 100%;
+  padding: 0.5rem 0 0 0;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  margin-top: auto !important;
+}
+
+footer .note {
+  text-align: right;
+  white-space: nowrap;
+}
+}
