@@ -530,8 +530,8 @@ body {
 }
 
 .role-row img {
-  width: 1rem;
-  height: 1rem;
+  width: 0.25rem;
+  height: 0.25rem;
   image-rendering: auto;        /* default */
   image-rendering: crisp-edges; /* alternative: better for pixel icons */
   image-rendering: -webkit-optimize-contrast; /* for Chrome/WebKit print quality */
